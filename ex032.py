@@ -1,4 +1,7 @@
-ano = int(input('Digite o ano: '))
+from datetime import date
+ano = int(input('Digite o ano, coloque 0 para o ano atual: '))
+if ano == 0:
+    ano = date.today().year
 if ano > 1582:
     if ano % 4 == 0:
         if ano % 100 != 0:
